@@ -1,0 +1,39 @@
+Power Up script that me and Jacob did together
+
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+
+public class PlayerPowerUpManager : MonoBehaviour {
+
+    static public Action<int> pickedUp;
+
+	// Use this for initialization
+	void Start () {
+        pickedUp = pickup;
+	}
+
+    void pickup(int x)
+    {
+        if (x == 1)
+        {
+            powerupOne();
+        }
+        else if (x == 2)
+        {
+            powerupTwo();
+        }
+    }
+
+    void powerupOne()
+    {
+        print("Picked up powerup 1");
+    }
+
+    void powerupTwo()
+    {
+        print("Picked up powerup 2");
+    }
+
+}
